@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chat.Mapper.contents_mapper">
+    <select id="get_contentsListAll" parameterType="com.chat.Model.Contents" resultType="com.chat.Model.Contents">
+        SELECT * FROM contents
+    </select>
+    <insert id="insert_contentsListAll" useGeneratedKeys="true" keyProperty="id">
+        insert into contents(title,status,created_user,text)
+        values (#{title},#{status},#{created_user},#{text})
+    </insert>
+</mapper>

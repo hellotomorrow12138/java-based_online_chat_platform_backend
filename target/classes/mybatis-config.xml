@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--// mybatis_test ////////////////////////////////////-->
+<configuration>
+    <typeAliases>
+<!-- MyBatis 类型别名的配置,类型别名用于简化 XML 文件中的配置，以便在映射文件中引用实体类时不必使用完全限定名-->
+<!-- 这里的意思是将 com.chat.Model 包下的所有实体类都注册为类型别名
+     以便在 MyBatis 的映射文件(.xml)中 resultType 可以直接使用简单的类名引用这些实体类，而无需使用完整的包路径-->
+        <package name="com.chat.Model"/>
+    </typeAliases>
+    <!-- environments 数据库连接的环境配置，
+    可配置多个 environments，通过 default 属性来切换不同的 environments，
+    这里使用的是MySQL-->
+    <environments default="mysql">
+        <environment id="mysql">
+            <!-- transactionManager 指定事务管理方式，这里使用JDBC的提交和回滚设置-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--dataSource 指数据库连接池配置，POOLED是JDBC连接对象的数据源连接池的实现-->
+<!--     1.编写MyBatis核心配置文件 -> 替换连接信息 解决硬编码问题       -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"></property>
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/chat?useSSL=false"></property>
+                <property name="username" value="kala"></property>
+                <property name="password" value="000000"></property>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>        <!--这是告诉Mybatis区哪找持久化类的映射文件，对于在src下的文件直接写文件名，            如果在某包下，则要写明路径,如：com/mybatistest/config/UserMapper.xml-->
+<!--        <mapper resource="com.chat.Mapper.UserMapper.xml"></mapper>-->
+<!--        这里使用了名为“包扫描”的方式简化了Sql映射文件的加载，会自动扫描文件夹下所有的SQl映射文件-->
+        <package name="com.chat.Mapper"/>
+    </mappers>
+</configuration>

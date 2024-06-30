@@ -1,0 +1,28 @@
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .profile-card {
+			justify-content: center;
+			align-items: center;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			width: 40vh;
+			display: flex; /* 使用Flex布局 */
+			            flex-direction: column; /* 设置Flex子项垂直排列 */
+			            text-align: center; /* 文字居中 */
+			            min-height: 100vh; /* 页面至少占满视口高度 */
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>商品展示页</title>
+		<script src="../js/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/store.css">
+		<link rel="stylesheet" type="text/css" href="../css/article.css">
+		<script src="../js/article.js"></script>
+		<script src="../js/store.js"></script>
+	</head>
+	<body>
+		<div class="article_store">
+			<div class="sidebar">
+				<ul class="menu">
+					<li><a href="./contents.html">文章</a></li>
+					<li class="chatrooms-menu">
+						<a>聊天房</a>
+						<ul class="chatrooms-submenu" id="chatrooms"></ul> <!-- 动态添加聊天房菜单项 -->
+					</li>
+					<li><a href="./store.html">商店</a></li>
+					<li><a href="./user.html">个人主页</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="article_main">
+			<div id="sessionIdDisplay" class="session_style"></div>
+			<div id="usernameDisplay" class="session_style"></div>
+			<div id="product-container">
+				<h2>商品列表</h2>
+				<div id="products"></div>
+				<button class="button_fixed" id="submitSelection">提交选择</button>
+				<div class="showStore" id="showStore">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

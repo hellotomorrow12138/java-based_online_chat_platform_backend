@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cn">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>kala</title>
+		<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../css/chat.css">
+		<link rel="stylesheet" type="text/css" href="../css/article.css" />
+		<script src="../js/jquery-3.6.0.min.js"></script>
+		<script src="../js/chat.js"></script>
+	</head>
+	<body>
+		<div class="chat">
+			<div class="container">
+				<div class="sidebar">
+					<ul class="menu">
+						<li><a href="./contents.html">文章</a></li>
+						<li class="chatrooms-menu">
+							<a>聊天房</a>
+							<ul class="chatrooms-submenu" id="chatrooms"></ul> <!-- 动态添加聊天房菜单项 -->
+						</li>
+						<li><a href="./store.html">商店</a></li>
+						<li><a href="./user.html">个人主页</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="sessionIdDisplay" class="session_style"></div>
+			<div id="usernameDisplay" class="session_style"></div>
+
+			<div class="list-pane">
+				<div class="user-pane">
+					<div class="user-count">
+						<h2>当前在线人数：<span id="userCount">0</span></h2>
+					</div>
+					<div class="user-list" id="userList">
+
+					</div>
+				</div>
+			</div>
+
+			<div class="chat-pane">
+				<div class="chat-header">
+					<h2 id="chatNickname"></h2>
+				</div>
+				<div class="chat-message" id="chatHistory">
+
+				</div>
+				<div class="chat-textarea">
+					<textarea type="text" id="text" class="user-textarea" rows="10"></textarea>
+					<button class="send-button" id="sendButton">发送</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

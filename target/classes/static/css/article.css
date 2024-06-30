@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+/*    height: 100vh; /* 让容器充满整个视口高度 * *//
+}
+
+.sidebar {
+    width: 170px; /* 侧边栏固定宽度 */
+    background-color: #333; /* 侧边栏背景色 */
+/* 	height: 100vh */;
+}
+
+.menu {
+    list-style-type: none;
+/*    padding: 20px 0; */
+}
+.menu a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	color: #333;
+}
+.menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+/*    transition: background-color 0.3s ease; */
+	position: relative;
+}
+
+.menu li a:hover {
+    background-color: #555; /* 鼠标悬停时的背景色变化 */
+}
+.chatrooms-submenu {
+	position: relative;
+	display: none;
+	/* 默认隐藏子菜单 */
+	background-color: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* 	min-width: 160px; */
+	z-index: 1;
+}
+
+/* 当鼠标悬停在.chatrooms-menu上时，显示子菜单 */
+.menu .chatrooms-menu:hover .chatrooms-submenu {
+	display: block;
+}
+.room-link {
+    color: #000000!important; /* 或您选择的任何颜色 */
+}
+
+.room-link:hover {
+    color: #000000; /* 鼠标悬停时的颜色变化 */
+    text-decoration: underline; /* 添加下划线 */
+}
