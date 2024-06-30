@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chat.Mapper.vip_mapper">
+    <select id="get_vipList" parameterType="com.chat.Model.Vip" resultType="com.chat.Model.Vip">
+        SELECT * FROM vip
+    </select>
+    <select id="user_getVip" resultType="com.chat.Model.Vip" parameterType="com.chat.Model.Vip">
+        SELECT * FROM vip WHERE id = #{id}
+    </select>
+
+    <select id="username_vipLevel" parameterType="com.chat.Model.User" resultType="Integer">
+        SELECT vip FROM users WHERE user_name = #{user_name}
+    </select>
+</mapper>

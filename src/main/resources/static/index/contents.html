@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.6.0.min.js"></script>
+		<script src="../js/contents.js"></script>
+		<script src="../js/article.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/article.css" />
+		<link rel="stylesheet" type="text/css" href="../css/contents.css" />
+		<!-- 		<link rel="stylesheet" type="text/css" href="../css/contents_index.css" /> -->
+	</head>
+	<body>
+		<div class="sidebar">
+			<ul class="menu">
+				<li><a href="./contents.html">文章</a></li>
+				<li class="chatrooms-menu">
+					<a>聊天房</a>
+					<ul class="chatrooms-submenu" id="chatrooms"></ul> <!-- 动态添加聊天房菜单项 -->
+				</li>
+				<li><a href="./store.html">商店</a></li>
+				<li><a href="./user.html">个人主页</a></li>
+			</ul>
+		</div>
+		<div class="container">
+			<!-- 			<div id="sessionIdDisplay" style="position: absolute;"></div>
+			<div id="usernameDisplay" style="position: absolute;"></div> -->
+			<div class="div_flex_2" id="click_contentsDiv">
+				<input type="text" id="contents_search" placeholder="搜索">
+				<button type="button" onclick="search_contentsForm()">查找</button>
+				<div class="div_style">
+					<button id="refreshButton">刷新列表</button>
+				</div>
+				<table id="userTable">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>标题</th>
+							<th>作者</th>
+							<th>内容</th>
+							<th>是否私有</th>
+						</tr>
+					</thead>
+					<tbody id="tableBody">
+					</tbody>
+				</table>
+			</div>
+			<div class="div_flex_2" id="articleDisplay" style="display: none;"></div>
+
+			<div class="contents-write-container">
+				<div class="input-group">
+					<input type="text" id="input-title" class="input-title" placeholder="请输入标题" />
+				</div>
+				<textarea id="input-contents" class="user-textarea" rows="10" placeholder="在这里撰写您的内容..."></textarea>
+				<button type="button" class="send-button" onclick="add_contents()">发表</button>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chat.Mapper.store_mapper">
+    <select id="get_storeList" parameterType="com.chat.Model.Store" resultType="com.chat.Model.Store">
+        SELECT * FROM store
+    </select>
+    <select id="username_hasStore" parameterType="com.chat.Model.User" resultType="Integer">
+        SELECT has_store FROM users WHERE user_name = #{user_name}
+    </select>
+    <select id="user_getStore" resultType="com.chat.Model.Store" parameterType="com.chat.Model.Store">
+        SELECT * FROM store WHERE id = #{id}
+    </select>
+</mapper>

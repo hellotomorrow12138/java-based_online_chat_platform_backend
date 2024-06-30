@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+	<script src="../js/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/article.css" />
+	<script src="../js/user.js"></script>
+	<script src="../js/article.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/user.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="sidebar">
+			<ul class="menu">
+				<li><a href="./contents.html">文章</a></li>
+				<li class="chatrooms-menu">
+					<a>聊天房</a>
+					<ul class="chatrooms-submenu" id="chatrooms"></ul> <!-- 动态添加聊天房菜单项 -->
+				</li>
+				<li><a href="./store.html">商店</a></li>
+				<li><a href="./user.html">个人主页</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="sessionIdDisplay" style="position: absolute;"></div>
+	<div id="usernameDisplay" style="position: absolute;"></div>
+	<div class="profile-card">
+		<!-- <div class="profile-pic"></div> -->
+		<h1 id="user_name">用户名</h1>
+		VIP等级：<h1 id="vip_level">vip</h1>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,11 @@
+.text{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 设置容器高度为视口高度 */
+	width: 100%;
+}
+.session_style{
+	position: absolute;
+	
+}
