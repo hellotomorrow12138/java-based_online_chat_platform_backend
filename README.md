@@ -1,1 +1,1 @@
-This is from a 24 years graduated from the graduation of undergraduate fresh graduates, this project is in the chat platform back-end files, this back-end project is based on spring, and then there are based on HarmonyOS mobile applications, which will be shown in the next project!
+This is from a recent undergraduate graduate from the year 2024, this project is on the documentation of the backend of a chat platform, this backend project is spring based and then there is also a mobile application based on HarmonyOS which will be shown in the next project!
